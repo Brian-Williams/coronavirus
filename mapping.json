@@ -1,0 +1,41 @@
+{
+    "mappings" : {
+      "properties" : {
+        "country" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "province" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "day" : {
+            "type":   "date",
+            "format": "yyyyMMdd"
+        },
+        "confirmed" : {
+          "type" : "long"
+        },
+        "deaths" : {
+          "type" : "long"
+        },
+        "recovered" : {
+          "type" : "long"
+        },
+        "location" : {
+            "type": "geo_point"
+        }
+      }
+    }
+}
+
